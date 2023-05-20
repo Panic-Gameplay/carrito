@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react';
 
 const styles = {
   layout: {
@@ -7,18 +7,23 @@ const styles = {
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
-  }
-}
+  },
+};
+
+const container = {
+  width: '1200px',
+};
+
 class Layout extends Component {
   render() {
     return (
       <div style={styles.layout}>
-       <div>
-         {this.props.children}
-       </div>
+        <div style={container}>
+          {this.props.children}
+        </div>
       </div>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;
